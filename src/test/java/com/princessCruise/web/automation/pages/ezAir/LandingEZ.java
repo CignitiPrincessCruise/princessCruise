@@ -704,6 +704,7 @@ public class LandingEZ {
 			Assert.assertTrue(summaryLabel.contains("active"));
 			Assert.assertTrue(CommonVariables.CommonDriver.get().findElement(lblSummaryHeader).isDisplayed());
 			extentLogs.pass("Summary Page", "Successfully Verified Summary Page");
+			extentLogs.pass("Summary Page", "Successfully Verified Summary Page");
 		}
 		catch(Throwable e){
 			e.printStackTrace();

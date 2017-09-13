@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" configfailurepolicy="continue" guice-stage="DEVELOPMENT" name="Failed suite [Princess-Automation]" parallel="tests">
+  <listeners>
+    <listener class-name="com.princessCruise.web.automation.listeners.ExecutionListener"/>
+  </listeners>
+  <test name="Test-Firefox-Web(failed)" parallel="tests">
+    <parameter name="cloudExecution" value="false"/>
+    <parameter name="environment" value="QA"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="userRegion" value="US"/>
+    <parameter name="emailReport" value="false"/>
+    <parameter name="version" value="55"/>
+    <parameter name="platform" value="windows"/>
+    <parameter name="seleniumGrid" value="false"/>
+    <groups>
+      <run>
+        <include name="smoke"/>
+        <include name="regression"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.princessCruise.web.automation.stepDefinition.polarVision.DashboardStep">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="setUpClass"/>
+          <include name="Dashboard"/>
+          <include name="beforeMethod"/>
+          <include name="afterTest"/>
+          <include name="beforeSuite"/>
+          <include name="afterClass"/>
+          <include name="afterSuite"/>
+          <include name="beforeTest"/>
+          <include name="afterMethod"/>
+          <include name="tearDownClass"/>
+        </methods>
+      </class> <!-- com.princessCruise.web.automation.stepDefinition.polarVision.DashboardStep -->
+    </classes>
+  </test> <!-- Test-Firefox-Web(failed) -->
+</suite> <!-- Failed suite [Princess-Automation] -->

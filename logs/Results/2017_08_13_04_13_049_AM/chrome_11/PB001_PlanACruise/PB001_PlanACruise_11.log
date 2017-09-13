@@ -1,0 +1,4 @@
+13/08/2017 04:13:50	INFO 	PB001_PlanACruise_11		Staring the class
+13/08/2017 04:13:50	DEBUG	PB001_PlanACruise_11		In Before Class method inside TestEngineWeb.
+13/08/2017 04:13:58	INFO 	PB001_PlanACruise_11		Info: navigating URL : 'https://www.princess.com/'
+13/08/2017 04:14:19	INFO 	PB001_PlanACruise_11		Stopping the class

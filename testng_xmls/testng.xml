@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Princess-Automation" parallel="tests" thread-count="2"
+	preserve-order="false" configfailurepolicy="continue" junit="false"
+	skipfailedinvocationcounts="false" data-provider-thread-count="10"
+	group-by-instances="false" allow-return-values="false">
+	<listeners>
+		<listener class-name="com.princessCruise.web.automation.listeners.ExecutionListener" />
+	</listeners>
+	
+	 <test name="Test-Firefox-Web" junit="false"
+		skipfailedinvocationcounts="false" preserve-order="true"
+		group-by-instances="false" allow-return-values="false">
+		<parameter name="platform" value="windows" />
+		<parameter name="browser" value="firefox" />
+		<parameter name="version" value="55" />
+		<parameter name="environment" value="QA" />
+		<parameter name="userRegion" value="US" />
+		<parameter name="seleniumGrid" value="false" />
+		<parameter name="cloudExecution" value="false" />
+		<parameter name="emailReport" value="false" />
+		<groups>
+			<run>
+				<include name="smoke" />
+				<include name="regression" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.princessCruise.web.automation.stepDefinition.polarBear.HomePageStep" />
+			<class name="com.princessCruise.web.automation.stepDefinition.polarBear.SearchLandingStep" />
+			<class name="com.princessCruise.web.automation.stepDefinition.polarBear.SearchResultsStep" />
+			<class name="com.princessCruise.web.automation.stepDefinition.polarBear.DetailsPageStep" />
+			<!-- class name="com.princessCruise.web.automation.stepDefinition.polarBear.StateRoomStep" />
+			<class name="com.princessCruise.web.automation.stepDefinition.ezAir.LandingEZStep" />
+			<class name="com.princessCruise.web.automation.stepDefinition.polarVision.DashboardStep" />-->
+		</classes>
+	</test>
+	
+	
+	
+</suite> 
